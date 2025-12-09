@@ -5,6 +5,7 @@
 📧 [ahmedmoied7@gmail.com](mailto:ahmedmoied7@gmail.com)  
 
 ---
+## Seeking internship in Software Development (Remote, On-site, Hybrid)
 
 ## 🌟 About Me
 
