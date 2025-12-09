@@ -1,0 +1,22 @@
+# Ignore .idea folder (JetBrains IDEs, like IntelliJ or PyCharm)
+.idea/
+
+# Ignore Eclipse project files
+.classpath
+.project
+.settings/
+
+# Ignore compiled Java files
+*.class
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*~

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glassfish-web-app
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    version="7.0">
+
+    <context-root>/WebCarRESTProject</context-root>
+
+</glassfish-web-app>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Artist</title>
+</head>
+<body>
+    <h2>Search Artist by ID</h2>
+    <form id="searchForm">
+        Artist ID: <input type="number" name="art_id" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <h3>Result:</h3>
+    <pre id="result"></pre>
+
+    <script>
+        const form = document.getElementById("searchForm");
+        const result = document.getElementById("result");
+
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const artId = form.art_id.value;
+            try {
+                const response = await fetch(`webapi/searchArtist?art_id=${artId}`);
+                if (!response.ok) throw new Error("Artist not found");
+                const data = await response.json();
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                result.textContent = err;
+            }
+        });
+    </script>
+</body>
+</html>

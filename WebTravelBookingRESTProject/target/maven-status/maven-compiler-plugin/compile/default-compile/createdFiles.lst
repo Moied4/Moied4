@@ -1,0 +1,9 @@
+com\travelagency\rest\BookingResource.class
+com\travelagency\rest\HelloResource.class
+com\travelagency\soap\BookingSOAPServiceImpl.class
+com\travelagency\models\Booking.class
+com\travelagency\rest\RouteResource.class
+com\travelagency\models\Route.class
+com\travelagency\soap\SOAPAutoPublisher.class
+com\travelagency\rest\RestApplication.class
+com\travelagency\soap\BookingSOAPService.class

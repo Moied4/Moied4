@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Billing Form</title>
+</head>
+<body>
+    <h2>Add New Billing Info</h2>
+    <form action="http://localhost:8080/WebBillingRESTProject-0.0.1-SNAPSHOT/api/WebBilling/addNewBilling" method="POST">
+        Client ID: <input type="number" name="client_ID" required><br>
+        Last Name: <input type="text" name="client_LName" required><br>
+        First Name: <input type="text" name="client_FName" required><br>
+        Product Name: <input type="text" name="product_Name" required><br>
+        Product Price: <input type="number" step="0.01" name="prd_Price" required><br>
+        Product Qty: <input type="number" name="prd_Qty" required><br>
+        <input type="submit" value="Add Billing Info">
+    </form>
+</body>
+</html>

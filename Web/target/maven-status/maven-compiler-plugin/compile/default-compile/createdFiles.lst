@@ -1,0 +1,6 @@
+com\travelagency\models\Booking.class
+com\travelagency\rest\bookings\BookingResource.class
+com\travelagency\models\Route.class
+com\travelagency\rest\HelloResource.class
+com\travelagency\rest\RestApplication.class
+com\travelagency\rest\routes\RouteResource.class

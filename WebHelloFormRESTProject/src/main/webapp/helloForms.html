@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello REST Form</title>
+</head>
+<body>
+    <h2>Test WebHelloFormRESTProject</h2>
+
+    <h3>POST Request</h3>
+    <form action="api/hello" method="post">
+        Name: <input type="text" name="name" required>
+        <input type="submit" value="Send POST">
+    </form>
+
+    <h3>PUT Request (using JS Fetch)</h3>
+    <form id="putForm">
+        Name: <input type="text" id="putName" required>
+        <input type="button" value="Send PUT" onclick="sendPut()">
+    </form>
+
+    <h3>DELETE Request (using JS Fetch)</h3>
+    <form id="deleteForm">
+        Name: <input type="text" id="deleteName" required>
+        <input type="button" value="Send DELETE" onclick="sendDelete()">
+    </form>
+
+    <script>
+        function sendPut() {
+            const name = document.getElementById('putName').value;
+            fetch('api/hello', {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: 'name=' + encodeURIComponent(name)
+            })
+            .then(res => res.text())
+            .then(alert);
+        }
+
+        function sendDelete() {
+            const name = document.getElementById('deleteName').value;
+            fetch('api/hello?name=' + encodeURIComponent(name), {
+                method: 'DELETE'
+            })
+            .then(res => res.text())
+            .then(alert);
+        }
+    </script>
+</body>
+</html>

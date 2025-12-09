@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Booking Portal</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { margin-bottom: 30px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    input, select { margin: 5px 0; padding: 5px; width: 100%; max-width: 300px; }
+    input[type="submit"] { width: auto; padding: 8px 16px; }
+    .result { margin-top: 10px; padding: 10px; border: 1px dashed #888; background-color: #f9f9f9; }
+</style>
+<script>
+    // REST Booking
+    async function bookTicket(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const bookingData = {
+            userId: formData.get('email'),
+            routeId: formData.get('routeId'),
+            passengerName: formData.get('customerName'),
+            paymentMode: "Credit Card",
+            status: "CONFIRMED"
+        };
+
+        const resultDiv = document.getElementById("restBookingResult");
+        resultDiv.innerHTML = "Processing REST booking...";
+
+        try {
+            const res = await fetch("/WebTravelBookingRESTProject/api/bookings", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(bookingData)
+            });
+            if (!res.ok) throw new Error("REST booking failed");
+            const data = await res.json();
+            resultDiv.innerHTML = `<strong>REST Booking Successful!</strong><br>ID: ${data.id}<br>Name: ${bookingData.passengerName}<br>Route: ${bookingData.routeId}`;
+        } catch (err) {
+            resultDiv.innerHTML = `<strong>Error:</strong> ${err.message}`;
+        }
+    }
+
+    // SOAP Booking
+    async function bookSoapTicket(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const customerName = formData.get('customerName');
+        const flightId = formData.get('flightId');
+
+        const soapBody = `<?xml version="1.0" encoding="utf-8"?>
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.travelagency.com/">
+           <soapenv:Header/>
+           <soapenv:Body>
+              <soap:bookFlight>
+                 <flightId>${flightId}</flightId>
+                 <customerName>${customerName}</customerName>
+              </soap:bookFlight>
+           </soapenv:Body>
+        </soapenv:Envelope>`;
+
+        const resultDiv = document.getElementById("soapBookingResult");
+        resultDiv.innerHTML = "Processing SOAP booking...";
+
+        try {
+            const res = await fetch("/WebTravelBookingRESTProject/soap/booking", {
+                method: "POST",
+                headers: { "Content-Type": "text/xml" },
+                body: soapBody
+            });
+            if (!res.ok) throw new Error("SOAP booking failed");
+            const data = await res.text();
+            resultDiv.innerHTML = `<strong>SOAP Booking Response:</strong><br><pre>${data}</pre>`;
+        } catch (err) {
+            resultDiv.innerHTML = `<strong>Error:</strong> ${err.message}`;
+        }
+    }
+
+    // Search Routes
+    async function searchRoutes(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const params = new URLSearchParams({
+            source: formData.get('source'),
+            destination: formData.get('destination'),
+            date: formData.get('date'),
+            transportType: formData.get('transportType')
+        });
+        const resultDiv = document.getElementById("searchResult");
+        resultDiv.innerHTML = "Searching routes...";
+
+        try {
+            const res = await fetch("/WebTravelBookingRESTProject/api/routes/search?" + params.toString());
+            if (!res.ok) throw new Error("Search failed");
+            const data = await res.json();
+            if (data.length === 0) {
+                resultDiv.innerHTML = "No routes found for the selected criteria.";
+                return;
+            }
+            let html = "<strong>Search Results:</strong><ul>";
+            data.forEach(route => {
+                html += `<li>${route.transportType} from ${route.source} to ${route.destination} on ${route.date} - Route ID: ${route.id}</li>`;
+            });
+            html += "</ul>";
+            resultDiv.innerHTML = html;
+        } catch (err) {
+            resultDiv.innerHTML = `<strong>Error:</strong> ${err.message}`;
+        }
+    }
+</script>
+</head>
+<body>
+<h1>Travel Booking Portal</h1>
+
+<!-- Search Routes -->
+<h2>Search Routes</h2>
+<form id="searchForm" onsubmit="searchRoutes(event)">
+    Source: <input type="text" name="source" required><br>
+    Destination: <input type="text" name="destination" required><br>
+    Date: <input type="date" name="date" required><br>
+    Transport Type:
+    <select name="transportType" required>
+        <option value="Flight">Flight</option>
+        <option value="Bus">Bus</option>
+        <option value="Train">Train</option>
+    </select><br><br>
+    <input type="submit" value="Search Routes">
+</form>
+<div id="searchResult" class="result"></div>
+
+<!-- REST Booking -->
+<h2>Book via REST</h2>
+<form id="bookingForm" onsubmit="bookTicket(event)">
+    Name: <input type="text" name="customerName" required><br>
+    Email: <input type="email" name="email" required><br>
+    Contact: <input type="text" name="contact" required><br>
+    Route ID: <input type="text" name="routeId" required><br>
+    Number of Seats: <input type="number" name="seatCount" min="1" required><br><br>
+    <input type="submit" value="Book Ticket">
+</form>
+<div id="restBookingResult" class="result"></div>
+
+<!-- SOAP Booking -->
+<h2>Book via SOAP</h2>
+<form id="soapBookingForm" onsubmit="bookSoapTicket(event)">
+    Name: <input type="text" name="customerName" required><br>
+    Flight ID: <input type="text" name="flightId" required><br>
+    <input type="submit" value="Book via SOAP">
+</form>
+<div id="soapBookingResult" class="result"></div>
+
+</body>
+</html>
