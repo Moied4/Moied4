@@ -1,0 +1,6 @@
+Hospital ID: 3556
+Hospital Name: JewishGeneral
+Number of Surgeries: 61
+Cost per Surgery: 999.99
+Surgery Discount (%): 9.00
+Total Hospital Revenue: 55509.44
