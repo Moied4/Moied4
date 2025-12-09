@@ -1,0 +1,12 @@
+# Ignore .idea folder (JetBrains IDEs)
+.idea/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore MacOS system files (optional)
+.DS_Store
+
+# Ignore Windows system files (optional)
+Thumbs.db
