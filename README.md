@@ -5,11 +5,11 @@
 📧 [ahmedmoied7@gmail.com](mailto:ahmedmoied7@gmail.com)  
 
 ---
-## Seeking internship in Software Development (Remote, On-site, Hybrid)
+## Intern at Solutions 5520 inc.
 
 ## 🌟 About Me
 
-I’m a motivated and professional software developer currently studying **Software Development at Vanier College (2024–2025), graduating February 2025**. With a strong background in **customer service, security operations, sales, and data collection**, I bring:  
+I’m a motivated and professional software developer that recently graduated from **Software Development at Vanier College (2024–2025), graduated February 2025**. With a strong background in **software, security operations, e-commerce, and data collection**, I bring:  
 
 - **Teamwork & Adaptability** – collaborating effectively in projects  
 - **Analytical Thinking** – breaking down problems to develop efficient solutions  
@@ -29,9 +29,11 @@ I enjoy solving problems, working in groups, building meaningful software, and c
 
 ## 📈 Currently Working On
 
-- Building **Flutter/Dart applications**  
-- Developing **full-stack web projects**  
-- Exploring **data-driven solutions** and algorithms  
+💻 Building C# and Blazor web applications
+
+🌐 Developing full-stack web projects with Wix integration
+
+📊 Exploring data-driven solutions and algorithms
 
 ---
 
