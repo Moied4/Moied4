@@ -9,7 +9,7 @@
 
 ## 🌟 About Me
 
-I’m a motivated and professional software developer that recently graduated from **Software Development at Vanier College (2024–2025), graduated February 2025**. With a strong background in **software, security operations, e-commerce, and data collection**, I bring:  
+I’m a motivated and professional software developer that recently graduated from **Software Development at Vanier College (2024–2026), graduated February 2026**. With a strong background in **software, security operations, e-commerce, and data collection**, I bring:  
 
 - **Teamwork & Adaptability** – collaborating effectively in projects  
 - **Analytical Thinking** – breaking down problems to develop efficient solutions  
