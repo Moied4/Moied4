@@ -1,45 +1,36 @@
 
-=======
-# 👋 Hi there, I’m Moied Ahmed
+# 🍳 AI Chef Recipe Generator
 
-💻 **Software Developer |** 🎯 **Solutions Analyst |** 📊 **Data-Driven Problem Solver**  
-📍 Montreal, QC  
-📧 [ahmedmoied7@gmail.com](mailto:ahmedmoied7@gmail.com)  
-
----
-## Intern at Solutions 5520 inc.
-
-## 🌟 About Me
-
-I’m a motivated and professional software developer that recently graduated from **Software Development at Vanier College (2024–2026), graduated February 2026**. With a strong background in **software, security operations, e-commerce, and data collection**, I bring:  
-
-- **Teamwork & Adaptability** – collaborating effectively in projects  
-- **Analytical Thinking** – breaking down problems to develop efficient solutions  
-- **Continuous Learning** – expanding my technical skillset continuously  
-
-I enjoy solving problems, working in groups, building meaningful software, and contributing to projects that make an impact.
+A Flutter mobile application that generates recipe suggestions based on ingredients using the Gemini AI API.
 
 ---
 
-## 💻 Skills
+## 📱 Overview
 
-- **Languages:** Dart, Java, Python, JavaScript  
-- **Frameworks & Tools:** Flutter, Git, VS Code, Firebase  
-- **Other Skills:** Problem Solving, Team Collaboration, Agile Methodologies  
+AI Chef helps users input ingredients they have at home and instantly generates recipe ideas using AI.
 
 ---
 
-## 📈 Currently Working On
+## ✨ Features
 
-💻 Building C# and Blazor web applications
-
-🌐 Developing full-stack web projects with Wix integration
-
-📊 Exploring data-driven solutions and algorithms
+- 🧠 AI-powered recipe generation (Gemini API)
+- 🥕 Ingredient-based suggestions
+- 🔥 Clean and simple Flutter UI
+- 🔐 Firebase integration (Auth / backend support)
+- 📱 Cross-platform mobile app (Android & iOS)
 
 ---
 
-## 🤝 Let’s Connect
+## 🛠 Tech Stack
 
-📧 Email: [ahmedmoied7@gmail.com](mailto:ahmedmoied7@gmail.com)
+- Flutter (Dart)
+- Firebase (Auth, Firestore)
+- Gemini API (Google AI)
+- HTTP package
+- flutter_dotenv
 
+---
+
+## 🔑 Environment Variables
+
+This app requires a `.env` / `config.env` file in assets:
