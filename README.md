@@ -12,7 +12,7 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 
 
-\## 💻 Features 
+\## 💻 Features
 
 \- Add / manage cars in the system
 
@@ -34,9 +34,11 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 \- Python
 
-\- Tkinter 
+\- Tkinter
 
-\- SQLite 
+\- SQLite
+
+
 
 \---
 
@@ -50,7 +52,9 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 3\. Run the main file:
 
-&#x20;  ```bash
 
-&#x20;  python main.py
+
+```bash
+
+python main.py
 
