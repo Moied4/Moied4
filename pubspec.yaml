@@ -36,6 +36,7 @@ flutter:
   # Asset declaration for 'config.env'
   assets:
     - assets/config.env
+    - assets/google_logo.png
     - images/
 
 dependency_overrides:
