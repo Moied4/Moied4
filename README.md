@@ -5,8 +5,9 @@ The Student Attendance System is a desktop application designed to track and man
 
 ---
 
-## 💻 Features
+## 💻 Features (CRUD)
 - Add / remove students
+- Create/Read/Update/Delete records
 - Mark attendance (Present / Absent)
 - View attendance reports
 - Simple and user-friendly interface
@@ -15,15 +16,15 @@ The Student Attendance System is a desktop application designed to track and man
 ---
 
 ## 🛠️ Technologies Used
-- C# / .NET (or your actual stack)
-- Windows Forms / WPF (if applicable)
-- SQL / Local file storage
+- C# / .NET 
+- Windows Forms 
+- SQL 
 
 ---
 
 ## 🚀 How to Run
 1. Open the project in Visual Studio
-2. Restore dependencies (if needed)
+2. Restore dependencies 
 3. Run the application using `Start Debugging`
 
 ---
