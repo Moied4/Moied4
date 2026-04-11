@@ -54,7 +54,15 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 
 
-```bash
-
 python main.py
+
+
+
+\---
+
+
+
+\## 👤 Author
+
+Moied Ahmed
 
