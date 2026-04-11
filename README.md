@@ -2,6 +2,14 @@
 
 
 
+\*\*Author:\*\* Moied Ahmed
+
+
+
+\---
+
+
+
 \## 📌 Overview
 
 The Car Rental System is a Python desktop application that allows users to rent cars, manage bookings, and track vehicle availability efficiently.
@@ -14,7 +22,7 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 \## 💻 Features
 
-\- Add / manage cars in the system
+\- Add and manage cars in the system
 
 \- Rent and return vehicles
 
@@ -50,19 +58,11 @@ The Car Rental System is a Python desktop application that allows users to rent 
 
 2\. Install required dependencies
 
-3\. Run the main file:
+3\. Run the main file using:
 
 
+
+```bash
 
 python main.py
-
-
-
-\---
-
-
-
-\## 👤 Author
-
-Moied Ahmed
 
